@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Too many cooks</title>
+    </head>
+
+    <!--
+    <!-- codemirror gives us a nice editor 
+    <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./lib/codemirror.css">
+    <script src="./mode/javascript/javascript.js"></script>
+    -->
+    <!-- node.js for communication with server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- a nice font for icons -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- too many cooks styles and js -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="client.js"></script>
+
+    <body>
+        <audio controls src="http://127.0.0.1:8000/stream.ogg"></audio>
+
+        <div id="history" class="box">
+            <h1>History</h1>
+        </div>
+
+        <div id="code" class="box">
+            <h1>Editor</h1>
+            <textarea id="editor" cols=80 rows=6></textarea><br />
+            <button type="button" onclick="evaluateCode()">Evaluate</button>
+        </div>
+
+        <div id="output" class="box">
+            <h1>Console</h1>
+        </div>
+        
+        <div id="docs" class="box">
+        
+        </div>
+    </body>
+</html>
